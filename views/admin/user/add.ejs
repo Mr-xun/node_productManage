@@ -1,0 +1,44 @@
+<%- include ../public/header.ejs%>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <%- include ../public/aslideleft.ejs%>
+
+
+        </div>
+        <div class="col-sm-10">
+            <ol class="breadcrumb">
+                <li class="active">商品管理
+                </li>
+                <li class="active">商品列表
+                </li>
+            </ol>
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    增加商品
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive input-form">
+                        <form action="/admin/user/doAdd" enctype="multipart/form-data" method="post">
+                            <ul>
+                                <li> 用户名: <input type="text" name="username" placeholder='请输入用户名'　required="required"/></li>
+                                <li> 　密码: <input type="password" name="password" placeholder='请输入密码' required="required"/></li>
+                                <li> 　性别: 
+                                    男:<input id='radio_1' type='radio' value='男' name='sex' checked='checked'  />
+                                    女:<input id='radio_2' type='radio' value='女' name='sex'  /></li>
+                                <li>
+                                    <br />
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
